@@ -1,0 +1,48 @@
+# --------------------------
+# AMBIENTE / CREDENCIAIS
+# --------------------------
+.env
+.env.*
+!.env.example
+
+# --------------------------
+# DADOS DE SESSÃO WHATSAPP
+# (Baileys armazena QR, keys e tokens)
+# --------------------------
+auth_info/
+auth_info/*
+
+# --------------------------
+# ARQUIVOS DE ESTADO / USUÁRIO
+# --------------------------
+userState.json
+userState_backup.json
+tickets.json
+# --------------------------
+# LOGS
+# --------------------------
+*.log
+logs/
+debug.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# --------------------------
+# NODE MODULES
+# --------------------------
+node_modules/
+dist/
+build/
+
+# --------------------------
+# SISTEMA OPERACIONAL
+# --------------------------
+.DS_Store
+Thumbs.db
+
+# --------------------------
+# EDITORES
+# --------------------------
+.vscode/
+.idea/

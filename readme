@@ -1,0 +1,155 @@
+O Projeto GrupoPinho é um chatbot corporativo criado para facilitar os processos internos da empresa Grupo Pinho , permitindo que os colaboradores realizem:
+
+📄 Abertura de Ordens de Serviço (OS)
+
+🛒 Abertura de Ordens de Compra (OC)
+
+✏️ Atualização de pedidos existentes
+
+✅ Finalização de OS e OC
+
+Tudo isso diretamente pelo WhatsApp , usando um fluxo guiado que garante consistência, organização e precisão nas informações enviadas para o Notion.
+
+🚀 Tecnologias
+
+Este projeto utiliza as seguintes tecnologias principais:
+
+Node.js — Lógica do servidor e fluxo do bot
+
+Baileys — Integração com WhatsApp
+
+Notion API — Armazenamento e gerenciamento de pedidos
+
+dotenv — Leitura de variáveis ​​de ambiente
+
+Nodemon — (Opcional) Desenvolvimento com recarga automática
+
+🎯Principais Funcionalidades
+
+✔ Abertura de OS com fluxo guiado
+✔ Abertura de OC
+✔ Atualização de ordens existentes
+✔ Finalização com resumo
+✔ Estado persistente do usuário (userState)
+✔ Validação de entradas
+✔ Confirmação antes de salvar
+✔ Integração direta com tabelas do Notion
+✔ Respostas automáticas personalizadas
+
+🧱 Arquitetura Geral
+Usuário (WhatsApp)
+        │
+        ▼
+      Baileys
+        │
+        ▼
+      Node.js
+        │   ├─ Fluxo de conversa
+        │   ├─ Estados do usuário
+        │   └─ Regras e validações
+        ▼
+    Notion API
+
+📦 Instalação
+
+Clone o projeto e instale as dependências:
+
+git clone https://github.com/seu-usuario/Projeto-GrupoPinho.git
+cd Projeto-GrupoPinho
+npm install
+
+▶️ Execução
+Iniciar o bot:
+node Bot.js
+
+Modo de desenvolvimento:
+npm run dev
+
+
+⚠️ Verifique se o arquivo .envestá configurado corretamente antes de executá-lo.
+
+💬 Exemplos de Uso
+➤ Abrir OS
+
+Usuário:
+
+Quero abrir uma OS
+
+
+O bot iniciou o fluxo de perguntas:
+
+Local
+
+Descrição
+
+Responsável
+
+Prioridade
+
+Confirmação final
+
+➤ Abrir OC
+
+Usuário:
+
+Abrir OC
+
+
+Solicitação de bot:
+
+Produto/Serviço
+
+Justificativa
+
+Centro de atendimento
+
+Valentia
+
+Confirmação
+
+➤ Atualizar Pedido
+
+Usuário:
+
+Atualizar OC 1024
+
+
+Bot busca no Notion e pergunta:
+
+Novo status
+
+Observações
+
+Confirmação
+
+📁 Estrutura de Pastas
+Projeto-GrupoPinho/
+│ bot.js
+│ userState.json
+│ package.json
+│ .env
+
+
+📌 Melhorias Planejadas
+
+ Adicionar suporte a fotos/anexos
+
+ Painel para visualizar OS/OC
+
+ Permissões por usuário/setor
+
+ Registros avançados
+
+ Histórico completo das conversas
+
+ Não mais
+
+📄 Licença
+
+Projeto de uso interno da empresa Grupo Pinho .
+Não é permitida a distribuição externa sem autorização.
+
+🤝 Contribuição
+
+Pull Requests são bem-vindos!
+Para mudanças maiores, abra uma questão para discutirmos melhorias.
