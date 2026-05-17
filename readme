@@ -1,155 +1,135 @@
-O Projeto GrupoPinho é um chatbot corporativo criado para facilitar os processos internos da empresa Grupo Pinho , permitindo que os colaboradores realizem:
+# 🤖 GrupoPinho Chatbot | Chatbot GrupoPinho
 
-📄 Abertura de Ordens de Serviço (OS)
+## 🇺🇸 English
 
-🛒 Abertura de Ordens de Compra (OC)
+The **GrupoPinho Project** is a corporate chatbot developed to simplify internal company processes, allowing employees to perform several tasks directly through **WhatsApp**.
 
-✏️ Atualização de pedidos existentes
+The bot uses a guided conversation flow to ensure consistency, organization, and accuracy in the information sent to **Notion**.
 
-✅ Finalização de OS e OC
+---
 
-Tudo isso diretamente pelo WhatsApp , usando um fluxo guiado que garante consistência, organização e precisão nas informações enviadas para o Notion.
+## 🚀 Features
 
-🚀 Tecnologias
+The chatbot allows users to:
 
-Este projeto utiliza as seguintes tecnologias principais:
+- 📄 Create Service Orders (OS)
+- 🛒 Create Purchase Orders (OC)
+- ✏️ Update existing requests
+- ✅ Finalize OS and OC requests
+- 📌 Send structured information to Notion
+- 💬 Receive automated and personalized responses
 
-Node.js — Lógica do servidor e fluxo do bot
+---
 
-Baileys — Integração com WhatsApp
+## 🛠️ Technologies Used
 
-Notion API — Armazenamento e gerenciamento de pedidos
+- **Node.js** — Server logic and chatbot flow
+- **Baileys** — WhatsApp integration
+- **Notion API** — Request storage and management
+- **dotenv** — Environment variable management
+- **Nodemon** — Optional tool for development with automatic reload
 
-dotenv — Leitura de variáveis ​​de ambiente
+---
 
-Nodemon — (Opcional) Desenvolvimento com recarga automática
+## 🎯 Main Functionalities
 
-🎯Principais Funcionalidades
+- Guided flow for creating Service Orders
+- Guided flow for creating Purchase Orders
+- Update of existing orders
+- Final summary before submission
+- Persistent user state using `userState`
+- Input validation
+- Confirmation before saving data
+- Direct integration with Notion databases
+- Customized automatic responses
 
-✔ Abertura de OS com fluxo guiado
-✔ Abertura de OC
-✔ Atualização de ordens existentes
-✔ Finalização com resumo
-✔ Estado persistente do usuário (userState)
-✔ Validação de entradas
-✔ Confirmação antes de salvar
-✔ Integração direta com tabelas do Notion
-✔ Respostas automáticas personalizadas
+---
 
-🧱 Arquitetura Geral
-Usuário (WhatsApp)
+## 🧱 General Architecture
+
+```text
+User (WhatsApp)
         │
         ▼
-      Baileys
+     Baileys
         │
         ▼
-      Node.js
-        │   ├─ Fluxo de conversa
-        │   ├─ Estados do usuário
-        │   └─ Regras e validações
+     Node.js
+        │
+        ├─ Conversation flow
+        ├─ User states
+        └─ Rules and validations
+        │
         ▼
     Notion API
 
-📦 Instalação
+-----------------------------------------------------------------------------------------------------------------------------------------
 
-Clone o projeto e instale as dependências:
+# 🤖 Chatbot Corporativo GrupoPinho
 
-git clone https://github.com/seu-usuario/Projeto-GrupoPinho.git
-cd Projeto-GrupoPinho
-npm install
+O **Projeto GrupoPinho** é um chatbot corporativo desenvolvido para facilitar os processos internos da empresa, permitindo que os colaboradores realizem solicitações diretamente pelo **WhatsApp**.
 
-▶️ Execução
-Iniciar o bot:
-node Bot.js
+O bot utiliza um fluxo guiado de conversa para garantir consistência, organização e precisão nas informações enviadas para o **Notion**.
 
-Modo de desenvolvimento:
-npm run dev
+---
 
+## 🚀 Funcionalidades
 
-⚠️ Verifique se o arquivo .envestá configurado corretamente antes de executá-lo.
+O chatbot permite que os usuários realizem:
 
-💬 Exemplos de Uso
-➤ Abrir OS
+- 📄 Abertura de Ordens de Serviço (OS)
+- 🛒 Abertura de Ordens de Compra (OC)
+- ✏️ Atualização de pedidos existentes
+- ✅ Finalização de OS e OC
+- 📌 Envio estruturado das informações para o Notion
+- 💬 Respostas automáticas personalizadas
 
-Usuário:
+---
 
-Quero abrir uma OS
+## 🛠️ Tecnologias Utilizadas
 
+- **Node.js** — lógica do servidor e fluxo do bot
+- **Baileys** — integração com WhatsApp
+- **Notion API** — armazenamento e gerenciamento dos pedidos
+- **dotenv** — gerenciamento de variáveis de ambiente
+- **Nodemon** — desenvolvimento com recarga automática
 
-O bot iniciou o fluxo de perguntas:
+---
 
-Local
+## 🎯 Principais Funcionalidades
 
-Descrição
+- Fluxo guiado para abertura de OS
+- Fluxo guiado para abertura de OC
+- Atualização de ordens existentes
+- Resumo final antes do envio
+- Estado persistente do usuário com `userState`
+- Validação de entradas
+- Confirmação antes de salvar os dados
+- Integração direta com tabelas do Notion
+- Respostas automáticas personalizadas
 
-Responsável
+---
 
-Prioridade
+## 🧱 Arquitetura Geral
 
-Confirmação final
-
-➤ Abrir OC
-
-Usuário:
-
-Abrir OC
-
-
-Solicitação de bot:
-
-Produto/Serviço
-
-Justificativa
-
-Centro de atendimento
-
-Valentia
-
-Confirmação
-
-➤ Atualizar Pedido
-
-Usuário:
-
-Atualizar OC 1024
-
-
-Bot busca no Notion e pergunta:
-
-Novo status
-
-Observações
-
-Confirmação
-
-📁 Estrutura de Pastas
-Projeto-GrupoPinho/
-│ bot.js
-│ userState.json
-│ package.json
-│ .env
+```text
+Usuário (WhatsApp)
+        │
+        ▼
+     Baileys
+        │
+        ▼
+     Node.js
+        │
+        ├─ Fluxo de conversa
+        ├─ Estados do usuário
+        └─ Regras e validações
+        │
+        ▼
+    Notion API
 
 
-📌 Melhorias Planejadas
 
- Adicionar suporte a fotos/anexos
 
- Painel para visualizar OS/OC
 
- Permissões por usuário/setor
 
- Registros avançados
-
- Histórico completo das conversas
-
- Não mais
-
-📄 Licença
-
-Projeto de uso interno da empresa Grupo Pinho .
-Não é permitida a distribuição externa sem autorização.
-
-🤝 Contribuição
-
-Pull Requests são bem-vindos!
-Para mudanças maiores, abra uma questão para discutirmos melhorias.
